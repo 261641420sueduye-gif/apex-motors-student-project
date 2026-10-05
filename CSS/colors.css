@@ -1,0 +1,25 @@
+:root {
+    --obsidian: #07090c;
+    --charcoal: #111820;
+    --charcoal-light: #1a252d;
+    --panel: rgba(18, 27, 34, .94);
+    --gold: #d7b16b;
+    --gold-light: #f2d79b;
+    --chrome: #cbd2d4;
+    --text: #f5f1e9;
+    --muted: #a6afb2;
+    --success: #85c9a8;
+    --danger: #ef8d86;
+    --line: rgba(215, 177, 107, .24);
+    --shadow: 0 24px 70px rgba(0, 0, 0, .42);
+    --glow: 0 0 28px rgba(215, 177, 107, .16);
+    --radius: 22px;
+    --radius-small: 12px;
+}
+
+body {
+    color: var(--text);
+    background: radial-gradient(circle at 84% 0%,
+            rgba(38, 53, 63, .88), transparent 27%),
+        linear-gradient(135deg, var(--obsidian), var(--charcoal) 48%, #080b0e);
+}

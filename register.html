@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Motors | إنشاء حساب</title>
+    <meta name="description"
+        content="نموذج تسجيل تجريبي ضمن مشروع Apex Motors الدراسي؛ لا تُحفظ بيانات الحساب لعدم وجود Backend.">
+    <!-- 1. المكتبات الخارجية (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <!-- 2. ملفات الـ CSS المقسمة للمشروع -->
+    <link rel="stylesheet" href="../CSS/colors.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/images.css">
+    <link rel="stylesheet" href="../CSS/components.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+</head>
+
+<body>
+    <header>
+        <div class="site-header">
+            <a class="brand" href="index.html" aria-label="Apex Motors الرئيسية">
+                <div class="brand-mark">A</div>
+                <div class="brand-text">
+                    Apex Motors
+                    <small>Luxury Performance</small>
+                </div>
+            </a>
+            <nav aria-label="التنقل الرئيسي">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="cars.html">السيارات</a></li>
+                    <li><a href="details.html">تفاصيل السيارات</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                    <li><a href="register.html" aria-current="page">إنشاء حساب</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-shell">
+            <form id="register-form" novalidate>
+                <h2>إنشاء حساب جديد</h2>
+                <p class="form-demo-note">نموذج واجهة تجريبي فقط؛ لن تُحفظ بياناتك أو يُنشأ حساب فعلي.</p>
+                <label for="register-name">الاسم</label>
+                <input type="text" id="register-name" name="name" autocomplete="name" minlength="2" required>
+
+                <label for="register-email">البريد الإلكتروني</label>
+                <input type="email" id="register-email" name="email" autocomplete="email" required>
+
+                <label for="register-password">كلمة المرور</label>
+                <input type="password" id="register-password" name="password" autocomplete="new-password" minlength="6"
+                    required>
+
+                <div class="button-row" style="margin-top: 18px;">
+                    <button type="submit">إنشاء الحساب</button>
+                    <a class="button secondary" href="login.html">لديك حساب؟ تسجيل الدخول</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">Apex Motors مشروع دراسي وتجريبي بتقنيات HTML5 وCSS3 وJavaScript. تطوير الطالب معتز
+            صالح علي الأنسي، جامعة صنعاء، كلية الحاسوب وتكنولوجيا المعلومات.</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/script.js"></script>
+</body>
+
+</html>

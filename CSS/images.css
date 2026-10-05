@@ -1,0 +1,180 @@
+/* Requirement 2/3: protected media ratios, zoom and responsive showcase. */
+.hero-section {
+    min-height: 640px;
+    position: relative;
+    display: flex;
+    align-items: end;
+    padding: clamp(34px, 7vw, 90px);
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(6, 9, 12, .94) 8%, rgba(6, 9, 12, .58) 53%, rgba(6, 9, 12, .18)), url("../images/apex-showroom.jpg.png") center / cover;
+    box-shadow: var(--shadow);
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 255, 255, .12);
+    pointer-events: none;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.hero-copy .lead {
+    max-width: 600px;
+    font-size: 1.12rem;
+    margin-bottom: 24px;
+}
+
+.showcase-slider {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--panel);
+    box-shadow: var(--shadow);
+}
+
+.showcase-slide {
+    display: none;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 28px;
+    min-height: 350px;
+    padding: 24px;
+}
+
+.showcase-slide.is-active {
+    display: grid;
+}
+
+.showcase-slide img {
+    width: 100%;
+    height: 300px;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    border-radius: var(--radius-small);
+}
+
+.showcase-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 0 0 18px;
+}
+
+.showcase-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.showcase-dots button {
+    width: 10px;
+    height: 10px;
+    min-height: 10px;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.showcase-dots button.is-active {
+    background: var(--gold-light);
+}
+
+.card-image-wrap,
+.ambassador-card {
+    overflow: hidden;
+}
+
+.card-image-wrap img,
+.car-card>img,
+.featured-car-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.featured-car-card img {
+    height: 240px;
+}
+
+.inventory-card:hover img,
+.featured-car-card:hover img,
+.ambassador-card:hover img {
+    transform: scale(1.06);
+}
+
+.ambassador-card {
+    position: relative;
+    min-height: 270px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--panel);
+}
+
+.ambassador-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 270px;
+    object-fit: contain;
+    transition: transform .6s ease;
+}
+
+.ambassador-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(4, 6, 8, .92), transparent 62%);
+}
+
+.ambassador-copy {
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+    left: 20px;
+    z-index: 1;
+}
+
+.media-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #050709;
+    border-radius: var(--radius-small);
+}
+
+.media-frame video,
+.video-card video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+}
+
+.media-frame video {
+    height: 100%;
+    object-fit: contain;
+}
+
+.video-card video.video-portrait {
+    aspect-ratio: 9 / 16;
+}
+
+.spec-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 24px 0;
+}
+
+.spec-gallery img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: var(--radius-small);
+}

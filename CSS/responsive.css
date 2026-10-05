@@ -1,0 +1,253 @@
+/* Requirement 2: desktop, tablet and mobile breakpoints without horizontal overflow. */
+@media (max-width: 1000px) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .featured-car-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .premium-band {
+        grid-template-columns: 1fr;
+    }
+
+    .ambassador-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .ambassador-card:first-child {
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .notice-banner {
+        padding-inline: 14px;
+        font-size: .78rem;
+    }
+
+    .contact-channels {
+        grid-template-columns: 1fr;
+    }
+
+    .site-header,
+    main,
+    .footer-inner {
+        width: min(100% - 28px, 1220px);
+    }
+
+    .site-header {
+        align-items: stretch;
+        gap: 8px;
+        padding: 10px 0;
+    }
+
+    .site-header nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 3px;
+    }
+
+    main {
+        padding-top: 24px;
+    }
+
+    nav ul {
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 5px 3px;
+        font-size: .7rem;
+        line-height: 1.35;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.65rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .hero-section {
+        min-height: 0;
+        padding: 24px 16px;
+    }
+
+    .showcase-slide {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+        min-height: 0;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .showcase-slide img {
+        height: auto;
+        aspect-ratio: 16 / 10;
+    }
+
+    .showcase-controls {
+        gap: 6px;
+    }
+
+    .showcase-controls>button {
+        min-width: 32px;
+        min-height: 32px;
+        padding-inline: 6px;
+    }
+
+    .showcase-dots {
+        gap: 4px;
+    }
+
+    .showcase-dots button {
+        flex: 0 0 8px;
+        width: 8px;
+        height: 8px;
+        min-height: 8px;
+    }
+
+    .section-head,
+    .inventory-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .cars-grid,
+    .featured-grid,
+    .featured-car-grid,
+    .service-grid,
+    .ambassador-grid,
+    .video-grid,
+    .premium-features,
+    .spec-gallery,
+    .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .ambassador-card {
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+    }
+
+    .ambassador-card img {
+        min-height: 0;
+        object-fit: contain;
+    }
+
+    .ambassador-copy {
+        right: 9px;
+        bottom: 8px;
+        left: 9px;
+        font-size: .72rem;
+    }
+
+    .luxury-strip,
+    .hero-metrics {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+        margin-top: 18px;
+    }
+
+    .luxury-strip {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .metric,
+    .luxury-item,
+    .car-body,
+    .featured-car-body,
+    .video-card {
+        padding: 9px;
+    }
+
+    .card-image-wrap img,
+    .car-card>img,
+    .featured-car-card img {
+        height: auto;
+        aspect-ratio: 16 / 10;
+        object-fit: contain;
+    }
+
+    .section-shell {
+        margin-top: 18px;
+        padding: 18px 0;
+    }
+
+    .section-head {
+        gap: 10px;
+        margin-bottom: 14px;
+    }
+
+    .section-head,
+    .inventory-header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .premium-band {
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .featured-car-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .spec-gallery img {
+        aspect-ratio: 16 / 10;
+        object-fit: contain;
+    }
+
+    .table-wrap {
+        max-width: 100%;
+    }
+
+    .toast {
+        right: 14px;
+        bottom: 14px;
+        max-width: calc(100% - 28px);
+    }
+}
+
+@media (max-width: 350px) {
+    .brand {
+        min-width: 0;
+        gap: 7px;
+    }
+
+    .brand-mark {
+        width: 36px;
+        height: 36px;
+        flex: 0 0 36px;
+    }
+
+    .brand-text {
+        font-size: .88rem;
+        letter-spacing: 0;
+    }
+
+    .brand-text small {
+        font-size: .58rem;
+        letter-spacing: .08em;
+    }
+
+    nav a {
+        font-size: .64rem;
+        padding-inline: 1px;
+    }
+}

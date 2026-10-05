@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Motors | تفاصيل السيارات</title>
+    <meta name="description"
+        content="تفاصيل ومقارنة توضيحية لسيارات ضمن مشروع Apex Motors الدراسي، مع صور وفيديوهات محلية متجاوبة.">
+    <!-- 1. المكتبات الخارجية (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <!-- 2. ملفات الـ CSS المقسمة للمشروع -->
+    <link rel="stylesheet" href="../CSS/colors.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/images.css">
+    <link rel="stylesheet" href="../CSS/components.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+</head>
+
+<body>
+    <aside class="notice-banner">Apex Motors مشروع دراسي وتجريبي لتطبيق HTML5 وCSS3 وJavaScript، طوّره الطالب معتز صالح
+        علي الأنسي، جامعة صنعاء، كلية الحاسوب وتكنولوجيا المعلومات. بيانات السيارات هنا توضيحية فقط.</aside>
+    <header>
+        <div class="site-header">
+            <a class="brand" href="index.html" aria-label="Apex Motors الرئيسية">
+                <div class="brand-mark">A</div>
+                <div class="brand-text">
+                    Apex Motors
+                    <small>Luxury Performance</small>
+                </div>
+            </a>
+            <nav aria-label="التنقل الرئيسي">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="cars.html">السيارات</a></li>
+                    <li><a href="details.html" aria-current="page">تفاصيل السيارات</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                    <li><a href="register.html">إنشاء حساب</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-shell">
+            <div class="page-header">
+                <span class="eyebrow">مواصفات مختارة</span>
+                <h1>تفاصيل السيارات</h1>
+                <p>صفحة مقارنة توضيحية لعرض تنظيم المحتوى والمواصفات ضمن مشروع دراسي.</p>
+            </div>
+            <p class="form-demo-note">الأسماء والمواصفات والسرعات الظاهرة بيانات تجريبية غير مؤكدة وليست عرضاً لسيارات
+                حقيقية.</p>
+
+            <div class="media-frame">
+                <video controls preload="metadata">
+                    <source src="../videos/bmw.mp4.mp4" type="video/mp4">متصفحك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+
+            <div class="spec-gallery">
+                <img src="../images/camry.jpg.png" alt="تويوتا كامري" loading="lazy">
+                <img src="../images/sonata.jpg.png" alt="هيونداي سوناتا" loading="lazy">
+                <img src="../images/mercedec.jpg.png" alt="مرسيدس بنز" loading="lazy">
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <caption style="padding:18px 16px 0; color: var(--muted); text-align: right;">مقارنة مختصرة بين
+                        السيارات</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">السيارة</th>
+                            <th scope="col">النوع</th>
+                            <th scope="col">سنة الصنع</th>
+                            <th scope="col">السرعة القصوى</th>
+                            <th scope="col">الأداء</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>تويوتا كامري</td>
+                            <td>سيدان</td>
+                            <td>2026</td>
+                            <td>220 كم/س</td>
+                            <td>مريح ومتوازن</td>
+                        </tr>
+                        <tr>
+                            <td>هيونداي سوناتا</td>
+                            <td>سيدان</td>
+                            <td>2026</td>
+                            <td>230 كم/س</td>
+                            <td>عصري ومتقدم</td>
+                        </tr>
+                        <tr>
+                            <td>مرسيدس بنز</td>
+                            <td>فاخرة</td>
+                            <td>2026</td>
+                            <td>250 كم/س</td>
+                            <td>فاخرة وقوية</td>
+                        </tr>
+                        <tr>
+                            <td>BMW</td>
+                            <td>رياضية</td>
+                            <td>2026</td>
+                            <td>260 كم/س</td>
+                            <td>رياضية ومميزة</td>
+                        </tr>
+                        <tr>
+                            <td>سيدان نيسان</td>
+                            <td>سيدان</td>
+                            <td>2026</td>
+                            <td>غير محددة (Demo)</td>
+                            <td>سيدان تنفيذية بتصميم انسيابي وتجهيزات عملية للقيادة اليومية.</td>
+                        </tr>
+                        <tr>
+                            <td>كامري الفئة التنفيذية</td>
+                            <td>سيدان</td>
+                            <td>2026</td>
+                            <td>غير محددة (Demo)</td>
+                            <td>سيدان عملية بمقصورة مريحة وتقنيات مساعدة للسائق.</td>
+                        </tr>
+                        <tr>
+                            <td>مرسيدس سيدان</td>
+                            <td>سيدان فاخرة</td>
+                            <td>2026</td>
+                            <td>غير محددة (Demo)</td>
+                            <td>أناقة سيدان فاخرة مع مقصورة هادئة وتجهيزات راحة متقدمة.</td>
+                        </tr>
+                        <tr>
+                            <td>مرسيدس Signature</td>
+                            <td>سيدان فاخرة</td>
+                            <td>2026</td>
+                            <td>غير محددة (Demo)</td>
+                            <td>تجهيز راقٍ بخطوط مميزة وحضور فخم على الطريق.</td>
+                        </tr>
+                        <tr>
+                            <td>كوبيه رياضية</td>
+                            <td>رياضية</td>
+                            <td>2026</td>
+                            <td>غير محددة (Demo)</td>
+                            <td>سيارة رياضية منخفضة بتصميم جريء وتجهيزات أداء مميزة.</td>
+                        </tr>
+                        <tr>
+                            <td>Toyota Camry Executive</td>
+                            <td>سيدان</td>
+                            <td>غير محددة (Demo)</td>
+                            <td>غير محددة (Demo)</td>
+                            <td>نسخة عصرية تناسب ذوقك العائلي مع أداء هادئ وموثوق.</td>
+                        </tr>
+                        <tr>
+                            <td>Mercedes S-Class</td>
+                            <td>فاخرة</td>
+                            <td>غير محددة (Demo)</td>
+                            <td>غير محددة (Demo)</td>
+                            <td>سيارة فاخرة تحافظ على الهدوء والقوة في نفس الوقت.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="button-row" style="margin-top: 22px;">
+                <a class="button" href="cars.html">العودة إلى السيارات</a>
+                <button id="openCarModal" type="button" data-modal-url="../modals/modal-car-details.html">معاينة
+                    سريعة</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">Apex Motors مشروع دراسي وتجريبي بتقنيات HTML5 وCSS3 وJavaScript. تطوير الطالب معتز
+            صالح علي الأنسي، جامعة صنعاء، كلية الحاسوب وتكنولوجيا المعلومات.</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/script.js"></script>
+</body>
+
+</html>

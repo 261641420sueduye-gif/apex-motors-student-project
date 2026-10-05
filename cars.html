@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Motors | الأسطول</title>
+    <meta name="description"
+        content="معرض سيارات تجريبي ضمن مشروع Apex Motors الدراسي، يعرض بطاقات توضيحية قابلة للتصفية ومقاطع فيديو محلية.">
+    <!-- 1. المكتبات الخارجية (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <!-- 2. ملفات الـ CSS المقسمة للمشروع -->
+    <link rel="stylesheet" href="../CSS/colors.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/images.css">
+    <link rel="stylesheet" href="../CSS/components.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+</head>
+
+<body>
+    <aside class="notice-banner">
+        <strong>هذا الموقع مشروع دراسي وتجريبي لتطبيق HTML5 وCSS3 وJavaScript.</strong>
+        طوّره الطالب معتز صالح علي الأنسي، جامعة صنعاء، كلية الحاسوب وتكنولوجيا المعلومات. بيانات السيارات والأسعار
+        والمواصفات أمثلة توضيحية فقط، وApex Motors ليس معرضاً حقيقياً.
+    </aside>
+    <header>
+        <div class="site-header">
+            <a class="brand" href="index.html" aria-label="Apex Motors الرئيسية">
+                <div class="brand-mark">A</div>
+                <div class="brand-text">Apex Motors<small>Luxury Performance</small></div>
+            </a>
+            <nav aria-label="التنقل الرئيسي">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="cars.html" aria-current="page">الأسطول</a></li>
+                    <li><a href="details.html">تفاصيل السيارات</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                    <li><a href="register.html">إنشاء حساب</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="inventory-header">
+            <div><span class="eyebrow">Apex Motors / Curated Inventory</span>
+                <h1>نماذج سيارات تجريبية.</h1>
+                <p>بطاقات وصور توضيحية لا تمثل مخزوناً أو عروض بيع فعلية.</p>
+            </div>
+            <div class="inventory-count"><strong>11</strong><span>بطاقة تجريبية</span></div>
+        </section>
+        <p class="section-shell form-demo-note">كل أسماء الفئات والأسعار والمواصفات وحالات التوفر في هذه الصفحة بيانات
+            افتراضية لأغراض العرض، ويجب التحقق من أي معلومات حقيقية لدى مصدرها.</p>
+        <section class="section-shell inventory-section" aria-labelledby="inventory-title">
+            <div class="section-head">
+                <div><span class="eyebrow">Demo Catalog</span>
+                    <h2 id="inventory-title">بطاقات السيارات</h2>
+                </div>
+                <div class="filter-group" role="group" aria-label="تصفية السيارات حسب العلامة"><button
+                        class="filter-button is-active" type="button" data-filter="all">الكل</button><button
+                        class="filter-button" type="button" data-filter="mercedes">Mercedes</button><button
+                        class="filter-button" type="button" data-filter="bmw">BMW</button><button class="filter-button"
+                        type="button" data-filter="toyota">Toyota</button><button class="filter-button" type="button"
+                        data-filter="hyundai">Hyundai</button><button class="filter-button" type="button"
+                        data-filter="nissan">Nissan</button><button class="filter-button" type="button"
+                        data-filter="sport">Sport</button>
+                </div>
+            </div>
+            <div class="cars-grid inventory-grid">
+                <article class="car-card inventory-card" data-brand="toyota">
+                    <div class="card-image-wrap"><img src="../images/camry.jpg.png" alt="تويوتا كامري 2026"
+                            loading="lazy"><span class="card-status">متاحة</span></div>
+                    <div class="car-body">
+                        <div class="car-meta"><span class="badge">Toyota</span><span class="price">95,000 ر.س</span>
+                        </div>
+                        <h3>تويوتا كامري 2026</h3>
+                        <p>راحة يومية، تجهيزات ذكية، ومظهر أنيق يناسب العائلات والنجاح.</p>
+                        <ul class="spec-list">
+                            <li>محرك 2.5L</li>
+                            <li>عداد 0 كم</li>
+                            <li>ضمان شامل</li>
+                        </ul><a class="button button-small" href="details.html">التفاصيل <span
+                                aria-hidden="true">←</span></a>
+                    </div>
+                </article>
+                <article class="car-card inventory-card" data-brand="hyundai">
+                    <div class="card-image-wrap"><img src="../images/sonata.jpg.png" alt="هيونداي سوناتا 2026"
+                            loading="lazy"><span class="card-status">متاحة</span></div>
+                    <div class="car-body">
+                        <div class="car-meta"><span class="badge">Hyundai</span><span class="price">98,000 ر.س</span>
+                        </div>
+                        <h3>هيونداي سوناتا 2026</h3>
+                        <p>قيادة أنيقة مع تصميم حديث، راحة عالية، وتقنيات متقدمة.</p>
+                        <ul class="spec-list">
+                            <li>محرك 2.5L Turbo</li>
+                            <li>مقاعد فاخرة</li>
+                            <li>نظام أمان متقدم</li>
+                        </ul><a class="button button-small" href="details.html">التفاصيل <span
+                                aria-hidden="true">←</span></a>
+                    </div>
+                </article>
+                <article class="car-card inventory-card" data-brand="mercedes">
+                    <div class="card-image-wrap"><img src="../images/mercedec.jpg.png" alt="مرسيدس بنز 2026"
+                            loading="lazy"><span class="card-status">حصرية</span></div>
+                    <div class="car-body">
+                        <div class="car-meta"><span class="badge">Mercedes</span><span class="price">185,000 ر.س</span>
+                        </div>
+                        <h3>Mercedes-Benz 2026</h3>
+                        <p>هوية فاخرة وقوة موسيقية في كل نقطة، مثال للسيارات الفخمة.</p>
+                        <ul class="spec-list">
+                            <li>محرك V8</li>
+                            <li>تنجيد فاخر</li>
+                            <li>حزمة قيادة ذكية</li>
+                        </ul><a class="button button-small" href="details.html">التفاصيل <span
+                                aria-hidden="true">←</span></a>
+                    </div>
+                </article>
+                <article class="car-card inventory-card" data-brand="nissan">
+                    <div class="card-image-wrap"><img src="../images/اjkfsdhf.jpg.png" alt="سيدان نيسان 2026"
+                            loading="lazy"><span class="card-status">متاحة</span></div>
+                    <div class="car-body">
+                        <div class="car-meta"><span class="badge">Nissan</span><span class="price">92,000 ر.س</span>
+                        </div>
+                        <h3>سيدان نيسان 2026</h3>
+                        <p>سيدان تنفيذية بتصميم انسيابي وتجهيزات عملية للقيادة اليومية.</p>
+                        <ul class="spec-list">
+                            <li>محرك 2.5L</li>
+                            <li>قوة تقديرية 188 حصاناً</li>
+                            <li>ناقل حركة أوتوماتيكي</li>
+                        </ul><a class="button button-small" href="details.html">التفاصيل <span
+                                aria-hidden="true">←</span></a>
+                    </div>
+                </article>
+                <article class="car-card inventory-card" data-brand="toyota">
+                    <div class="card-image-wrap"><img src="../images/yuiiuhf.jpg.png"
+                            alt="تويوتا كامري الفئة التنفيذية 2026" loading="lazy"><span
+                            class="card-status">متاحة</span></div>
+                    <div class="car-body">
+                        <div class="car-meta"><span class="badge">Toyota</span><span class="price">103,000 ر.س</span>
+                        </div>
+                        <h3>كامري الفئة التنفيذية 2026</h3>
+                        <p>سيدان عملية بمقصورة مريحة وتقنيات مساعدة للسائق.</p>
+                        <ul class="spec-list">
+                            <li>محرك 2.5L</li>
+                            <li>قوة تقديرية 203 أحصنة</li>
+                            <li>دفع أمامي</li>
+                        </ul><a class="button button-small" href="details.html">التفاصيل <span
+                                aria-hidden="true">←</span></a>
+                    </div>
+                </article>
+                <article class="car-card inventory-card" data-brand="mercedes">
+                    <div class="card-image-wrap"><img src="../images/yfhfvbhb.jpg.png" alt="مرسيدس بنز سيدان 2026"
+                            loading="lazy"><span class="card-status">حصرية</span></div>
+                    <div class="car-body">
+                        <div class="car-meta"><span class="badge">Mercedes</span><span class="price">198,000 ر.س</span>
+                        </div>
+                        <h3>مرسيدس سيدان 2026</h3>
+                        <p>أناقة سيدان فاخرة مع مقصورة هادئة وتجهيزات راحة متقدمة.</p>
+                        <ul class="spec-list">
+                            <li>محرك 2.0L Turbo</li>
+                            <li>قوة تقديرية 255 حصاناً</li>
+                            <li>دفع خلفي</li>
+                        </ul><a class="button button-small" href="details.html">التفاصيل <span
+                                aria-hidden="true">←</span></a>
+                    </div>
+                </article>
+                <article class="car-card inventory-card" data-brand="mercedes">
+                    <div class="card-image-wrap"><img src="../images/fdfhurvx.jpg.png" alt="مرسيدس بنز Signature 2026"
+                            loading="lazy"><span class="card-status">حصرية</span></div>
+                    <div class="car-body">
+                        <div class="car-meta"><span class="badge">Mercedes</span><span class="price">205,000 ر.س</span>
+                        </div>
+                        <h3>مرسيدس Signature 2026</h3>
+                        <p>تجهيز راقٍ بخطوط مميزة وحضور فخم على الطريق.</p>
+                        <ul class="spec-list">
+                            <li>محرك 2.0L Turbo</li>
+                            <li>قوة تقديرية 255 حصاناً</li>
+                            <li>ناقل حركة أوتوماتيكي</li>
+                        </ul><a class="button button-small" href="details.html">التفاصيل <span
+                                aria-hidden="true">←</span></a>
+                    </div>
+                </article>
+                <article class="car-card inventory-card" data-brand="sport">
+                    <div class="card-image-wrap"><img src="../images/xzdzrfddewt.jpg.png" alt="كوبيه رياضية حمراء 2026"
+                            loading="lazy"><span class="card-status">مميزة</span></div>
+                    <div class="car-body">
+                        <div class="car-meta"><span class="badge">Sport</span><span class="price">320,000 ر.س</span>
+                        </div>
+                        <h3>كوبيه رياضية 2026</h3>
+                        <p>سيارة رياضية منخفضة بتصميم جريء وتجهيزات أداء مميزة.</p>
+                        <ul class="spec-list">
+                            <li>محرك V8 Twin-Turbo</li>
+                            <li>قوة تقديرية 600 حصان</li>
+                            <li>دفع رباعي</li>
+                        </ul><a class="button button-small" href="details.html">التفاصيل <span
+                                aria-hidden="true">←</span></a>
+                    </div>
+                </article>
+                <article class="car-card inventory-card" data-brand="bmw">
+                    <div class="card-image-wrap"><img src="../images/bmw.jpg.png" alt="BMW 2026" loading="lazy"><span
+                            class="card-status">جديد</span></div>
+                    <div class="car-body">
+                        <div class="car-meta"><span class="badge">BMW</span><span class="price">160,000 ر.س</span></div>
+                        <h3>BMW M8 Coupe 2026</h3>
+                        <p>أداء رياضي مذهل مع لمسات فخمة تجمع بين القوة والهوية.</p>
+                        <ul class="spec-list">
+                            <li>محرك 3.0L</li>
+                            <li>دفع رباعي</li>
+                            <li>حزمة M Sport</li>
+                        </ul><a class="button button-small" href="details.html">التفاصيل <span
+                                aria-hidden="true">←</span></a>
+                    </div>
+                </article>
+                <article class="car-card inventory-card" data-brand="toyota">
+                    <div class="card-image-wrap"><img src="../images/camry.jpg.png" alt="Toyota Camry Executive"
+                            loading="lazy"><span class="card-status">مميزة</span></div>
+                    <div class="car-body">
+                        <div class="car-meta"><span class="badge">Toyota</span><span class="price">103,000 ر.س</span>
+                        </div>
+                        <h3>Toyota Camry Executive</h3>
+                        <p>نسخة عصرية تناسب ذوقك العائلي مع أداء هادئ وموثوق.</p>
+                        <ul class="spec-list">
+                            <li>محرك 2.5</li>
+                            <li>نظام ملاحة</li>
+                            <li>إضاءة LED</li>
+                        </ul><a class="button button-small" href="details.html">التفاصيل <span
+                                aria-hidden="true">←</span></a>
+                    </div>
+                </article>
+                <article class="car-card inventory-card" data-brand="mercedes">
+                    <div class="card-image-wrap"><img src="../images/mercedec.jpg.png" alt="Mercedes S-Class"
+                            loading="lazy"><span class="card-status">حصرية</span></div>
+                    <div class="car-body">
+                        <div class="car-meta"><span class="badge">Mercedes</span><span class="price">210,000 ر.س</span>
+                        </div>
+                        <h3>Mercedes S-Class</h3>
+                        <p>سيارة فاخرة تحافظ على الهدوء والقوة في نفس الوقت.</p>
+                        <ul class="spec-list">
+                            <li>محرك V6</li>
+                            <li>مقاعد مدفأة</li>
+                            <li>تقنيات ذكية</li>
+                        </ul><a class="button button-small" href="details.html">التفاصيل <span
+                                aria-hidden="true">←</span></a>
+                    </div>
+                </article>
+            </div>
+            <p class="empty-state" hidden>لا توجد سيارات ضمن هذا التصنيف حالياً.</p>
+        </section>
+        <section class="section-shell video-section">
+            <div class="section-head">
+                <div><span class="eyebrow">Drive In Motion</span>
+                    <h2>مقاطع توضيحية</h2>
+                    <p>فيديوهات محلية ضمن ملفات المشروع، معروضة لأغراض العرض فقط.</p>
+                </div>
+            </div>
+            <div class="video-grid">
+                <article class="video-card">
+                    <h3>تويوتا كامري</h3><video controls preload="metadata">
+                        <source src="../videos/Toyota-camry.mp4.mp4" type="video/mp4">متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </article>
+                <article class="video-card">
+                    <h3>هيونداي</h3><video controls preload="metadata">
+                        <source src="../videos/Hyundai-Kona.mp4.mp4" type="video/mp4">متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </article>
+
+                <article class="video-card">
+                    <h3>Mercedes Performance</h3><video class="video-portrait" controls preload="metadata">
+                        <source src="../videos/mercedes.mp4.mp4" type="video/mp4">متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </article>
+                <article class="video-card">
+                    <h3>BMW Performance</h3><video controls preload="metadata">
+                        <source src="../videos/bmw.mp4.mp4" type="video/mp4">متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-inner">Apex Motors مشروع دراسي وتجريبي بتقنيات HTML5 وCSS3 وJavaScript. تطوير الطالب معتز
+            صالح علي الأنسي، جامعة صنعاء، كلية الحاسوب وتكنولوجيا المعلومات.</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/script.js"></script>
+</body>
+
+</html>
