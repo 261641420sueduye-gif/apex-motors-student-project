@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>سفراء Apex Motors</title>
+    <link rel="stylesheet" href="../CSS/colors.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/images.css">
+    <link rel="stylesheet" href="../CSS/components.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+</head>
+
+<body class="showcase-page">
+    <main class="showcase-shell">
+        <div class="showcase-heading"><span class="eyebrow">VIP Showcase</span>
+            <h1>هوية الأداء الفاخر</h1>
+        </div>
+        <div class="showcase-slider" data-slider>
+            <article class="showcase-slide is-active"><img src="ambassador-sport.jpg.png" alt="سفير السيارات الرياضية">
+                <div><span>Sport Class</span>
+                    <h2>أداء يترك أثراً</h2>
+                    <p>تجربة رياضية مصممة لعشاق التفاصيل الجريئة.</p>
+                </div>
+            </article>
+            <article class="showcase-slide"><img src="ambassador-mercedes.jpg.png" alt="سفير مرسيدس بنز">
+                <div><span>Mercedes-Benz Elite</span>
+                    <h2>ترف بثقة</h2>
+                    <p>أناقة ألمانية تتحدث بلغة الحضور.</p>
+                </div>
+            </article>
+            <article class="showcase-slide"><img src="ambassador-camry.jpg.png" alt="سفير تويوتا كامري">
+                <div><span>Toyota Excellence</span>
+                    <h2>ثقة كل يوم</h2>
+                    <p>توازن مثالي بين الاعتمادية والراحة.</p>
+                </div>
+            </article>
+            <article class="showcase-slide"><img src="ambassador-hyundai.jpg.png" alt="سفير هيونداي">
+                <div><span>Hyundai Modern</span>
+                    <h2>حركة عصرية</h2>
+                    <p>تقنية ذكية تواكب إيقاع الحياة.</p>
+                </div>
+            </article>
+            <div class="showcase-controls"><button type="button" data-prev aria-label="الشريحة السابقة">→</button>
+                <div class="showcase-dots" aria-label="التنقل بين الشرائح"></div><button type="button" data-next
+                    aria-label="الشريحة التالية">←</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        const slides = [...document.querySelectorAll('.showcase-slide')];
+        const dots = document.querySelector('.showcase-dots');
+        let current = 0;
+        slides.forEach((_, index) => { const dot = document.createElement('button'); dot.type = 'button'; dot.setAttribute('aria-label', `انتقل إلى الشريحة ${index + 1}`); dot.addEventListener('click', () => showSlide(index)); dots.append(dot); });
+        function showSlide(index) { current = (index + slides.length) % slides.length; slides.forEach((slide, slideIndex) => slide.classList.toggle('is-active', slideIndex === current)); dots.querySelectorAll('button').forEach((dot, dotIndex) => dot.classList.toggle('is-active', dotIndex === current)); }
+        document.querySelector('[data-prev]').addEventListener('click', () => showSlide(current - 1));
+        document.querySelector('[data-next]').addEventListener('click', () => showSlide(current + 1));
+        showSlide(0);
+        setInterval(() => showSlide(current + 1), 6500);
+    </script>
+</body>
+
+</html>
